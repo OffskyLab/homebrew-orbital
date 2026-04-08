@@ -1,8 +1,8 @@
 class Orbital < Formula
   desc "AI CLI environment manager for Claude Code, Codex, and Gemini CLI"
   homepage "https://github.com/OffskyLab/orbital"
-  url "https://github.com/OffskyLab/orbital/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "249346875ca68a1c0cf2e8bd9b14dd46a655de9fe96930b7764053835dd234b9"
+  url "https://github.com/OffskyLab/orbital/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "9c06ccbc35efd04b49104867dfc4c8a5ca38f48f0e4fa77523d68307fbd0a927"
   license "MIT"
   head "https://github.com/OffskyLab/orbital.git", branch: "main"
 
@@ -26,6 +26,6 @@ class Orbital < Formula
   end
 
   test do
-    assert_match "0.1.0", shell_output("#{bin}/orbital --version")
+    assert_match "0.1.1", shell_output("#{bin}/orbital --version")
   end
 end
