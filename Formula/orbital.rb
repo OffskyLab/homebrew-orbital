@@ -1,22 +1,32 @@
 class Orbital < Formula
   desc "Orbital — AI CLI environment manager for Claude Code, Codex, and Gemini CLI"
-  homepage "https://github.com/OffskyLab/orbital"
-  url "https://github.com/OffskyLab/orbital/archive/refs/tags/v0.1.7.tar.gz"
-  sha256 "9e990da0c0391f0d85e08beb7f6fc50e2a47cf009cd176ace8961a4c6e31e6dd"
+  homepage "https://github.com/OffskyLab/Orbital"
+  version "0.1.7"
   license "Apache-2.0"
-  head "https://github.com/OffskyLab/orbital.git", branch: "main"
 
-  depends_on xcode: ["15.0", :build]
-  depends_on :macos
+  on_macos do
+    on_arm do
+      url "https://github.com/OffskyLab/Orbital/releases/download/v#{version}/orbital-darwin-arm64.tar.gz"
+      sha256 "PLACEHOLDER_DARWIN_ARM64"
+    end
+  end
+
+  on_linux do
+    on_intel do
+      url "https://github.com/OffskyLab/Orbital/releases/download/v#{version}/orbital-linux-x86_64.tar.gz"
+      sha256 "PLACEHOLDER_LINUX_X86_64"
+    end
+    on_arm do
+      url "https://github.com/OffskyLab/Orbital/releases/download/v#{version}/orbital-linux-arm64.tar.gz"
+      sha256 "PLACEHOLDER_LINUX_ARM64"
+    end
+  end
 
   def install
-    system "swift", "build", "--configuration", "release", "--disable-sandbox"
-    bin.install ".build/release/orbital"
+    bin.install "orbital"
   end
 
   def post_install
-    # Write shell integration to rc file (bash/zsh auto-detected).
-    # This only adds the eval line if not already present.
     system "#{bin}/orbital", "setup"
   end
 
@@ -30,6 +40,6 @@ class Orbital < Formula
   end
 
   test do
-    assert_match "0.1.7", shell_output("#{bin}/orbital --version")
+    assert_match "#{version}", shell_output("#{bin}/orbital --version")
   end
 end
