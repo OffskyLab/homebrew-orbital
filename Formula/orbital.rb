@@ -22,6 +22,8 @@ class Orbital < Formula
     end
   end
 
+  depends_on "OffskyLab/orbital/orbital-sync"
+
   def install
     bin.install "orbital"
   end
