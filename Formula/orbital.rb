@@ -26,13 +26,19 @@ class Orbital < Formula
     bin.install "orbital"
   end
 
+  def post_install
+    system "#{bin}/orbital", "setup"
+  end
+
   def caveats
     <<~EOS
-      To enable shell integration, run:
+      Shell integration has been installed. To activate in your current shell:
 
-        eval "$(orbital setup)"
+        source ~/.orbital/activate.sh
 
-      This writes to your shell rc file and activates in the current shell.
+      To return to your original config at any time:
+
+        orbital use default
     EOS
   end
 
