@@ -1,24 +1,24 @@
 class Orbital < Formula
   desc "Orbital — AI CLI environment manager for Claude Code, Codex, and Gemini CLI"
   homepage "https://github.com/OffskyLab/Orbital"
-  version "0.10.0"
+  version "0.2.0"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
       url "https://github.com/OffskyLab/Orbital/releases/download/v#{version}/orbital-darwin-arm64.tar.gz"
-      sha256 "4439c36b5a201083707af10102fc9270b492e53afba78c8ef0a8cb9326fc59b1"
+      sha256 "5e341dbbbb49de5b96bb40731c4e6cf2633360b17b1e447546f4e82f85cedec8"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/OffskyLab/Orbital/releases/download/v#{version}/orbital-linux-x86_64.tar.gz"
-      sha256 "9c55f750e4be50798bcd5b0679d1a5a0b5e65b30d269dd66632bf7839849b955"
+      sha256 "40b9873f110c34ce372bbcf713cd3ab79a982c6bcd707d17c3049362da0f6563"
     end
     on_arm do
       url "https://github.com/OffskyLab/Orbital/releases/download/v#{version}/orbital-linux-arm64.tar.gz"
-      sha256 "e380c87b6fe7ef29d25fcacc18cd6cf946d1833561ca756620656e2e486ea9d2"
+      sha256 "42e6c9fb94fff1e339a0c3dbeb5a1ea51b6a9c0fa05a9e542c337674167c2830"
     end
   end
 
