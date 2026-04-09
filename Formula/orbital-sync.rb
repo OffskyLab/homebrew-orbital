@@ -1,24 +1,24 @@
 class OrbitalSync < Formula
   desc "P2P real-time sync daemon for Orbital — built on NMT protocol"
   homepage "https://github.com/OffskyLab/orbital-sync"
-  version "0.1.0"
+  version "1.0.0"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
       url "https://github.com/OffskyLab/orbital-sync/releases/download/v#{version}/orbital-sync-darwin-arm64.tar.gz"
-      sha256 "65bd31d5e8dd8af7b96c1d5bee959a5f330b6fb30e7b509d989d55e4fe611e61"
+      sha256 "26025134aaa3c2311a5321c98f4ff7345f7898ff454e72d797619720d431111d"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/OffskyLab/orbital-sync/releases/download/v#{version}/orbital-sync-linux-x86_64.tar.gz"
-      sha256 "a617eaecb09e24320792f4ce8dac1d5ddd6a00458a78b1e4e58ab0831a7276aa"
+      sha256 "7f9995465f141ba30fcd7988d0d7c2a70489b1c0b02e8137a0d003996590aaea"
     end
     on_arm do
       url "https://github.com/OffskyLab/orbital-sync/releases/download/v#{version}/orbital-sync-linux-arm64.tar.gz"
-      sha256 "3ec87d1d9631beb29fa993470eb692b1db9b8b9ed634ad03ce6e86038ccefc0a"
+      sha256 "3a6ee93628642dd6e6b1a41afa43c61269685d36905229c6c29788c3270b377b"
     end
   end
 
