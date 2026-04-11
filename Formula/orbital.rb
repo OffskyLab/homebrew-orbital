@@ -7,18 +7,18 @@ class Orbital < Formula
   on_macos do
     on_arm do
       url "https://github.com/OffskyLab/Orbital/releases/download/v#{version}/orbital-darwin-arm64.tar.gz"
-      sha256 "5faba67e890b03193de3235a83113792dfda2dfa92200f090464be2ce6bc9965"
+      sha256 "06ecd9d8c0c6b6738e63f593f45f786c92b069add47b4a3d06f2d1dcbf91cd33"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/OffskyLab/Orbital/releases/download/v#{version}/orbital-linux-x86_64.tar.gz"
-      sha256 "60e41cabf632985c8b9c888dbf5a60d4a062da0627da764475aae0c397f4f9e8"
+      sha256 "0a17582509d78b18e38b8269390869c512b71cbc075e2bb79c6cfd2452037a79"
     end
     on_arm do
       url "https://github.com/OffskyLab/Orbital/releases/download/v#{version}/orbital-linux-arm64.tar.gz"
-      sha256 "fd4ca6ceaa48dd4e923ad4d56fe0de5b49c0d6f1c9f358d4e59016e7b0b3386c"
+      sha256 "a562a71bb6a66d898392434d3bab041f9903b6ff101c61b35e2709ba4b8985e3"
     end
   end
 
