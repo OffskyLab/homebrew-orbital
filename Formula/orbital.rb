@@ -36,7 +36,7 @@ class Orbital < Formula
 
       To return to your original config at any time:
 
-        orbital use default
+        orbital use origin
     EOS
   end
 
