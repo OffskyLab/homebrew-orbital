@@ -28,15 +28,24 @@ class Orbital < Formula
     bin.install "orbital"
   end
 
+  deprecate! date: "2026-04-13", because: "renamed to orrery. See https://github.com/OffskyLab/Orrery"
+
   def caveats
     <<~EOS
-      To get started, run:
+      ⚠️  Orbital has been renamed to Orrery.
 
-        orbital setup && source ~/.orbital/activate.sh
+      All new development happens at https://github.com/OffskyLab/Orrery.
+      Migrate with:
 
-      To return to your original config at any time:
+        brew uninstall orbital
+        brew install OffskyLab/orrery/orrery
 
-        orbital use origin
+      On first run, `orrery` will automatically move ~/.orbital/ to ~/.orrery/
+      and update your shell rc file — no manual steps needed.
+
+      This formula stays at v1.1.6 as a frozen snapshot; no further updates
+      are planned. Existing workflows (including `orbital` invocations in
+      scripts and MCP configs) keep working until you migrate.
     EOS
   end
 
